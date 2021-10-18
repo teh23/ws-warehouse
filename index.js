@@ -1,5 +1,8 @@
 //TODO make it as class
-const { WebSocketServer } = require('ws');
+
+const express = require('express');
+const { Server } = require('ws');
+const PORT = process.env.PORT || 80;
 const {
   generateItems,
   generateMessage,
@@ -7,7 +10,11 @@ const {
   generateUpdate,
 } = require('./helpers');
 
-const wss = new WebSocketServer({ port: 80 });
+const server = express().listen(PORT, () =>
+  console.log(`Listening on ${PORT}`),
+);
+
+const wss = new Server({ server });
 
 const clients = new Map();
 
