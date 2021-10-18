@@ -1,0 +1,19 @@
+{
+  "name": "ws-warehouse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.13",
+    "uuid": "^8.3.2",
+    "ws": "^8.2.3"
+  }
+}
